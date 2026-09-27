@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editTextQuery"
+            android:hint="Αναζήτηση"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioByName"
+                android:text="Βάση το ονοματεπώνυμο"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+            <RadioButton
+                android:id="@+id/radioByDay"
+                android:text="Βάση την ημερομηνία"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+            <RadioButton
+                android:id="@+id/radioByPhone"
+                android:text="Βάση το τηλέφωνο"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                />
+            <RadioButton
+                android:id="@+id/radioByTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Βάση την ώρα" />
+
+            <RadioButton
+                android:id="@+id/radioChecked"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Παραδοτέες" />
+
+            <RadioButton
+                android:id="@+id/radioByType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Βάση το τύπος της τούρτας " />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:text="Αναζήτηση"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/resultsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

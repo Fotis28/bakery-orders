@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Bakery Orders</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+
+
+    <string-array name="String_Items">
+        <item>Δεν χρειάζομαι</item>
+        <item>5 τμχ</item>
+        <item>6 τμχ</item>
+        <item>7 τμχ</item>
+        <item>8 τμχ</item>
+        <item>9 τμχ</item>
+        <item>10 τμχ</item>
+        <item>11 τμχ</item>
+        <item>12 τμχ</item>
+        <item>13 τμχ</item>
+        <item>14 τμχ</item>
+        <item>15 τμχ</item>
+        <item>1/2 Λαμαρίνα</item>
+        <item>1 Λαμαρίνα</item>
+        <item>2 Λαμαρίνες</item>
+    </string-array>
+
+    <string-array name="String_tourtas">
+        <item>Στρόγγυλη</item>
+        <item>Τετράγωνο</item>
+        <item>Παραλληλόγραμμη</item>
+    </string-array>
+
+    <string-array name="String_Eidos_Tourtas">
+        <item>Απλή τούρτα</item>
+        <item>Ζαχαρόπαστα</item>
+        <item>Βουτυρόκρεμα</item>
+
+    </string-array>
+
+    <string-array name="String_Apofasi_Nai_Oxi">
+        <item>Οχι</item>
+        <item>Ναι</item>
+    </string-array>
+
+    <string-array name="String_Epilogi_Geusis_Tourtas">
+        <item>Σοκολάτα</item>
+        <item>Βανίλια</item>
+        <item>Νουτέλα</item>
+        <item>Bueno</item>
+        <item>Μπισκότο</item>
+        <item>Black Forest</item>
+        <item>Φράουλα</item>
+        <item>Φερέρο</item>
+
+
+
+    </string-array>
+</resources>

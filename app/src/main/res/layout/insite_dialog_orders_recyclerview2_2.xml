@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <!-- Κουμπί για να ανοίξεις τη λίστα των προϊόντων -->
+
+        <!-- RecyclerView για τα προϊόντα (κρυφό στην αρχή) -->
+        <LinearLayout
+            android:id="@+id/btnShowProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/NameAndLastNameOfTheClient"
+                android:text="Order: "
+
+                android:textSize="18dp" />
+
+            <ImageButton
+                android:id="@+id/btnExpand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Show Products"
+                android:src="@android:drawable/ic_menu_more"
+                app:tint="?attr/colorOnBackground"
+                />
+            <ImageButton
+                android:id="@+id/ButtonCkeckedOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:colorBackground"
+                android:src="@drawable/baseline_check_24"
+                app:tint="?attr/colorOnBackground"
+
+                />
+
+            <ImageButton
+                android:id="@+id/ButtonDeleteOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:colorBackground"
+                android:src="@drawable/round_delete_24"
+                app:tint="?attr/colorOnBackground"
+
+                />
+
+
+        </LinearLayout>
+
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

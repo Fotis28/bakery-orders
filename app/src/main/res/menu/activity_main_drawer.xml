@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="@string/menu_home"
+            android:tint="?attr/colorOnBackground"/>
+        <item
+            android:id="@+id/nav_CakeOrder"
+            android:icon="@drawable/baseline_cake_24"
+            android:title="Παραγγελία Τούρτας"
+            android:tint="?attr/colorOnBackground"/>
+        <item
+            android:id="@+id/nav_Product_Item"
+            android:icon="@drawable/outline_inventory_24"
+            android:title="Απογραφή Αναλώσιμων"
+            android:tint="?attr/colorOnBackground"/>
+        <item
+            android:id="@+id/navFindInformation"
+            android:icon="@drawable/outline_content_paste_search_24"
+            android:title="Πληροφορίες Παραγγελίας"
+            android:tint="?attr/colorOnBackground"/>
+            />
+
+
+    </group>
+</menu>

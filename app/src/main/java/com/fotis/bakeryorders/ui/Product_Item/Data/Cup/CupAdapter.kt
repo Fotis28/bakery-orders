@@ -1,0 +1,129 @@
+package com.fotis.bakeryorders.ui.Product_Item.Data.Cup
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+
+import android.widget.EditText
+import android.widget.ImageButton
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.fotis.bakeryorders.R
+
+
+class CupAdapter(
+    private val onDeleteClick: (CupData) -> Unit,
+    private val onQuantityChange: (CupData) -> Unit
+) : RecyclerView.Adapter<CupAdapter.CupViewHolder>() {
+
+    private var cups: MutableList<CupData> = mutableListOf()
+
+
+
+    private var expandedPosition = RecyclerView.NO_POSITION
+
+    fun setData(newCups: List<CupData>) {
+        cups = newCups.toMutableList()
+        notifyDataSetChanged()
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CupViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_product, parent, false)
+        return CupViewHolder(view)
+    }
+
+    override fun onBindViewHolder(holder: CupViewHolder, position: Int) {
+        holder.bind(cups[position])
+    }
+
+    fun getRedCups(): List<CupData> {
+        return cups.filter { it.quantity==0 }
+    }
+    fun getYellowCups(): List<CupData> {
+        return cups.filter { it.quantity == 1 }
+    }
+
+    override fun getItemCount(): Int = cups.size
+
+
+
+    inner class CupViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(cup: CupData) {
+            val nameText = itemView.findViewById<TextView>(R.id.tv_product_name)
+            val quantityEdit = itemView.findViewById<EditText>(R.id.et_quantity)
+            val colorBox = itemView.findViewById<View>(R.id.color_box)
+            val btnExpand = itemView.findViewById<ImageButton>(R.id.btn_expand)
+            val btnDelete = itemView.findViewById<ImageButton>(R.id.btn_delete)
+            val btnMinus = itemView.findViewById<ImageButton>(R.id.btn_minus)
+            val btnPlus = itemView.findViewById<ImageButton>(R.id.btn_plus)
+            val quantityButtons = itemView.findViewById<LinearLayout>(R.id.quantity_buttons)
+
+            nameText.text = cup.name
+            quantityEdit.setText(cup.quantity.toString())
+            setColorBasedOnQuantity(cup.quantity, colorBox)
+
+            val isExpanded = adapterPosition == expandedPosition
+            quantityButtons.visibility = if (isExpanded) View.VISIBLE else View.GONE
+            btnDelete.visibility = if (isExpanded) View.GONE else View.VISIBLE
+            btnExpand.setImageResource(
+                if (isExpanded) R.drawable.baseline_check_24
+                else R.drawable.sharp_add_24
+            )
+
+            // +/- buttons
+            btnMinus.setOnClickListener {
+                val current = quantityEdit.text.toString().toIntOrNull() ?: 1
+                val newQuantity = (current - 1).coerceAtLeast(0)
+                updateQuantity(newQuantity, quantityEdit, cup)
+            }
+
+            btnPlus.setOnClickListener {
+                val current = quantityEdit.text.toString().toIntOrNull() ?: 0
+                val newQuantity = current + 1
+                updateQuantity(newQuantity, quantityEdit, cup)
+            }
+
+            // expand toggle
+            btnExpand.setOnClickListener {
+                val previousExpandedPosition = expandedPosition
+                if (isExpanded) {
+                    expandedPosition = RecyclerView.NO_POSITION
+                } else {
+                    expandedPosition = adapterPosition
+                }
+                notifyItemChanged(previousExpandedPosition)
+                notifyItemChanged(adapterPosition)
+            }
+
+            // delete
+            btnDelete.setOnClickListener {
+                onDeleteClick(cup)
+            }
+        }
+
+        private fun updateQuantity(newQuantity: Int, editText: EditText, cup: CupData) {
+            editText.setText(newQuantity.toString())
+            val updatedCup = cup.copy(quantity = newQuantity)
+            cups[adapterPosition] = updatedCup
+            onQuantityChange(updatedCup)
+        }
+
+        private fun setColorBasedOnQuantity(quantity: Int, colorBox: View) {
+            when {
+                quantity == 0 -> colorBox.setBackgroundColor(android.graphics.Color.RED)
+                quantity < 2 -> colorBox.setBackgroundColor(android.graphics.Color.YELLOW)
+                else -> colorBox.setBackgroundColor(android.graphics.Color.GREEN)
+            }
+        }
+    }
+
+    fun updateLocalQuantity(updatedCup: CupData) {
+        val index = cups.indexOfFirst { it.id == updatedCup.id }
+        if (index != -1) {
+            cups[index] = updatedCup
+            notifyItemChanged(index)
+            onQuantityChange(updatedCup)
+        }
+    }
+}

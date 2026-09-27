@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp">
+
+    <com.google.android.material.card.MaterialCardView
+
+        android:id="@+id/materialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <!-- Χρωματιστό Κουτάκι -->
+            <View
+                android:id="@+id/color_box"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:color/holo_blue_light" />
+
+            <!-- Όνομα Προϊόντος -->
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Όνομα Προϊόντος"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Ποσότητα -->
+            <EditText
+                android:id="@+id/et_quantity"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:inputType="number"
+                android:focusable="false"
+
+                android:text="1"
+                android:textSize="16sp" />
+
+            <!-- Κουμπιά +/- -->
+            <LinearLayout
+                android:id="@+id/quantity_buttons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageButton
+                    android:id="@+id/btn_minus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_minus" />
+
+                <ImageButton
+                    android:id="@+id/btn_plus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_plus" />
+
+
+
+            </LinearLayout>
+
+            <!-- Κουμπί + για άνοιγμα επιλογών -->
+            <ImageButton
+                android:id="@+id/btn_expand"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/sharp_add_24"
+                android:layout_margin="5dp"
+                app:tint="?attr/colorOnBackground"
+               />
+
+            <ImageButton
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:id="@+id/btn_delete"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/round_delete_24"
+                app:tint="?attr/colorOnBackground"/>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

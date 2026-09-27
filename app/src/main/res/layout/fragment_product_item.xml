@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            tools:context=".ui.Apografi.ApografishowFragment"
+            android:padding="16dp">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/text_Paraggelia_Apografi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Φόρμα Παραγγελίας-Απογραφής"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_Paraggelia_Apografi">
+
+                <!-- Κουμπί για να ανοίξεις τη λίστα των προϊόντων -->
+
+                <!-- RecyclerView για τα προϊόντα (κρυφό στην αρχή) -->
+                <LinearLayout
+                    android:id="@+id/btnShowProducts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:orientation="horizontal">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Σακούλες"
+                        android:textSize="18dp" />
+
+                    <ImageButton
+                        android:id="@+id/btnExpand"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:contentDescription="Show Products"
+                        android:src="@android:drawable/ic_menu_more"
+                        app:tint="?attr/colorOnBackground"/>
+
+                    <ImageButton
+                        android:id="@+id/ButtonPlusBag"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="5dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:src="@drawable/sharp_box_add_24"
+                        app:tint="?attr/colorOnBackground" />
+
+
+                </LinearLayout>
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewProducts">
+
+                <!-- Κουμπί για να ανοίξεις τη λίστα των προϊόντων -->
+
+                <!-- RecyclerView για τα προϊόντα (κρυφό στην αρχή) -->
+                <LinearLayout
+                    android:id="@+id/btnShowProducts2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Κουτιά"
+
+                        android:textSize="18dp" />
+
+                    <ImageButton
+                        android:id="@+id/btnExpand2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:contentDescription="Show Products"
+                        android:src="@android:drawable/ic_menu_more"
+                        app:tint="?attr/colorOnBackground" />
+
+                    <ImageButton
+                        android:id="@+id/ButtonPlusBox"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/sharp_box_add_24"
+                        android:background="?android:attr/selectableItemBackground"
+                        app:tint="?attr/colorOnBackground"
+                        />
+
+                </LinearLayout>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewProducts2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerViewProducts2">
+
+                <!-- Κουμπί για να ανοίξεις τη λίστα των προϊόντων -->
+
+                <!-- RecyclerView για τα προϊόντα (κρυφό στην αρχή) -->
+                <LinearLayout
+                    android:id="@+id/btnShowProducts3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ποτήρια"
+
+                        android:textSize="18dp" />
+
+                    <ImageButton
+                        android:id="@+id/btnExpand3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:contentDescription="Show Products"
+                        android:src="@android:drawable/ic_menu_more"
+                        app:tint="?attr/colorOnBackground"/>
+                    <ImageButton
+                        android:id="@+id/ButtonPlusCup"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/sharp_box_add_24"
+                        android:background="?android:attr/selectableItemBackground"
+                        app:tint="?attr/colorOnBackground"
+                        />
+
+                </LinearLayout>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewProducts3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="52dp"
+                android:text="Αποθήκευση"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerViewProducts3" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+

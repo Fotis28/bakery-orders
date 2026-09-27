@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/AlllayoutOrder"
+    android:paddingBottom="8dp"
+   >
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_goneMarginLeft="0dp"
+        app:layout_goneMarginRight="0dp"
+        app:layout_goneMarginBottom="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp"
+
+       >
+
+        <!-- Κουμπί για να ανοίξεις τη λίστα των προϊόντων -->
+
+        <!-- RecyclerView για τα προϊόντα (κρυφό στην αρχή) -->
+        <LinearLayout
+            android:id="@+id/btnShowProducts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            >
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/NameAndLastNameOfTheClient"
+                android:text="Order: "
+
+                android:textSize="18dp" />
+
+            <ImageButton
+                android:id="@+id/btnExpand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Show Products"
+                android:src="@android:drawable/ic_menu_more"
+                app:tint="?attr/colorOnBackground"
+                />
+            <ImageButton
+                android:id="@+id/ButtonCkeckedOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                app:layout_goneMarginStart="0dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/baseline_check_24"
+                app:tint="?attr/colorOnBackground"
+
+                />
+
+            <ImageButton
+                android:id="@+id/ButtonDeleteOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                app:layout_goneMarginStart="0dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/round_delete_24"
+                app:tint="?attr/colorOnBackground"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/materialView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_goneMarginTop="0dp"
+        android:orientation="vertical"
+        app:cardCornerRadius="12dp"
+        android:maxHeight="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="20dp"
+        android:padding="10dp"
+
+        >
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_goneMarginTop="0dp"
+                >
+
+
+                <!-- Όνομα Προϊόντος -->
+                <TextView
+                    android:id="@+id/tv_product_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Όνομα Προϊόντος"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/btn_edit1"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/rounded_border_color_24"
+                    app:tint="?attr/colorOnBackground"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_goneMarginTop="0dp">
+
+
+                <!-- Όνομα Προϊόντος -->
+                <TextView
+                    android:id="@+id/tv_product_Tilefono"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Όνομα Προϊόντος"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/btn_Edit2"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/rounded_border_color_24"
+                    app:tint="?attr/colorOnBackground"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_goneMarginTop="0dp">
+
+
+                <!-- Όνομα Προϊόντος -->
+                <TextView
+                    android:id="@+id/tv_product_Eidos"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Όνομα Προϊόντος"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/btn_Edit3"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/rounded_border_color_24"
+                    app:tint="?attr/colorOnBackground"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_goneMarginTop="0dp"
+                >
+
+
+                <!-- Όνομα Προϊόντος -->
+                <TextView
+                    android:id="@+id/tv_product_Day"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Όνομα Προϊόντος"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/btn_Edit4"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/rounded_border_color_24"
+                    app:tint="?attr/colorOnBackground"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_goneMarginTop="0dp">
+
+
+                <!-- Όνομα Προϊόντος -->
+                <TextView
+                    android:id="@+id/tv_product_Geusi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Όνομα Προϊόντος"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/btn_Edit5"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/rounded_border_color_24"
+                    app:tint="?attr/colorOnBackground"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_goneMarginTop="0dp">
+
+
+                <!-- Όνομα Προϊόντος -->
+                <TextView
+                    android:id="@+id/tv_product_Sxima"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Όνομα Προϊόντος"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <ImageButton
+                    android:id="@+id/btn_Edit6"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/rounded_border_color_24"
+                    app:tint="?attr/colorOnBackground"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_goneMarginTop="0dp">
+
+
+                <!-- Όνομα Προϊόντος -->
+                <TextView
+                    android:id="@+id/tv_product_Sxolia"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Δεν υπάρχουν σχόλια"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+
+                <ImageButton
+                    android:id="@+id/btn_Edit7"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/rounded_border_color_24"
+                    app:tint="?attr/colorOnBackground"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_goneMarginTop="0dp">
+
+
+                <!-- Όνομα Προϊόντος -->
+                <TextView
+                    android:id="@+id/tv_product_Time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Δεν υπάρχουν σχόλια"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+
+                <ImageButton
+                    android:id="@+id/btn_Edit8"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/rounded_border_color_24"
+                    app:tint="?attr/colorOnBackground"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                app:layout_goneMarginTop="0dp">
+
+
+                <!-- Όνομα Προϊόντος -->
+                <TextView
+                    android:id="@+id/tv_product_Vafla"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="Δεν υπάρχουν σχόλια"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    />
+
+
+                <ImageButton
+                    android:id="@+id/btn_Edit9"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:src="@drawable/rounded_border_color_24"
+                    app:tint="?attr/colorOnBackground"
+                    />
+
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_height="wrap_content">
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ParaggeliaN"
+        android:text="Παραγγελια:"
+        android:textAlignment="center"
+        android:textSize="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_goneMarginTop="0dp"
+            >
+
+
+            <!-- Όνομα Προϊόντος -->
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Όνομα Προϊόντος"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_goneMarginTop="0dp">
+
+
+            <!-- Όνομα Προϊόντος -->
+            <TextView
+                android:id="@+id/tv_product_Tilefono"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Όνομα Προϊόντος"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_goneMarginTop="0dp">
+
+
+            <!-- Όνομα Προϊόντος -->
+            <TextView
+                android:id="@+id/tv_product_Eidos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Όνομα Προϊόντος"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_goneMarginTop="0dp"
+            >
+
+
+            <!-- Όνομα Προϊόντος -->
+            <TextView
+                android:id="@+id/tv_product_Day"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Όνομα Προϊόντος"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_goneMarginTop="0dp">
+
+
+            <!-- Όνομα Προϊόντος -->
+            <TextView
+                android:id="@+id/tv_product_Geusi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Όνομα Προϊόντος"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_goneMarginTop="0dp">
+
+
+            <!-- Όνομα Προϊόντος -->
+            <TextView
+                android:id="@+id/tv_product_Sxima"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Όνομα Προϊόντος"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_goneMarginTop="0dp">
+
+
+            <!-- Όνομα Προϊόντος -->
+            <TextView
+                android:id="@+id/tv_product_Sxolia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Δεν υπάρχουν σχόλια"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_goneMarginTop="0dp">
+
+
+            <!-- Όνομα Προϊόντος -->
+            <TextView
+                android:id="@+id/tv_product_Time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Δεν υπάρχουν σχόλια"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            app:layout_goneMarginTop="0dp">
+
+
+            <!-- Όνομα Προϊόντος -->
+            <TextView
+                android:id="@+id/tv_product_Vafla"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Δεν υπάρχουν σχόλια"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
